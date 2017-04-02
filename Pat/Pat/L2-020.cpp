@@ -7,22 +7,22 @@
 //using namespace std;
 //struct kid
 //{
-//	double power = 0;     //¹¦Á¦Öµ£¬Èç¹û´ËÈËÊÇµÃµÀÕß£¬ÔòÎª·­±¶Öµ
-//	bool genius = false;  //ÊÇ·ñÊÇµÃµÀÕß
-//	vector<int> student;  //ËûµÄÍ½µÜ£¨´¢´æµÄÊÇÍ½µÜ±àºÅ£©
-//}party[MAXNUMBER];	          //ÃÅÅÉÈËÊıÊı×é
-//double geniusPower = 0;   //µÃµÀÕßµÄ¹¦Á¦×ÜºÍ
-//double discount = 0;	  //Ã¿´Î´«¹¦Ë¥¼õ±ÈÖµ
+//	double power = 0;     //åŠŸåŠ›å€¼ï¼Œå¦‚æœæ­¤äººæ˜¯å¾—é“è€…ï¼Œåˆ™ä¸ºç¿»å€å€¼
+//	bool genius = false;  //æ˜¯å¦æ˜¯å¾—é“è€…
+//	vector<int> student;  //ä»–çš„å¾’å¼Ÿï¼ˆå‚¨å­˜çš„æ˜¯å¾’å¼Ÿç¼–å·ï¼‰
+//}party[MAXNUMBER];	          //é—¨æ´¾äººæ•°æ•°ç»„
+//double geniusPower = 0;   //å¾—é“è€…çš„åŠŸåŠ›æ€»å’Œ
+//double discount = 0;	  //æ¯æ¬¡ä¼ åŠŸè¡°å‡æ¯”å€¼
 //						  /**
 //						  *
 //						  * @param number
-//						  * µ±Ç°Ñ§Éú±àºÅ
+//						  * å½“å‰å­¦ç”Ÿç¼–å·
 //						  * @param teacherP
-//						  * Õâ¸öÑ§ÉúµÄÀÏÊ¦µÄ¹¦Á¦Öµ
+//						  * è¿™ä¸ªå­¦ç”Ÿçš„è€å¸ˆçš„åŠŸåŠ›å€¼
 //						  */
 //void dfs(int number, double teacherP)
 //{
-//	if (party[number].genius)//Èç¹ûÊÇµÃµÀÕß£¬Ôò½«ÊıÖµ¼Ó½øgeniusPower
+//	if (party[number].genius)//å¦‚æœæ˜¯å¾—é“è€…ï¼Œåˆ™å°†æ•°å€¼åŠ è¿›geniusPower
 //	{
 //		geniusPower += (teacherP*party[number].power*discount);
 //		party[number].power = (teacherP*party[number].power*discount);
@@ -42,12 +42,12 @@
 //	party[0].power = teacherPower;
 //	for (int i = 0; i < N; i++)
 //	{
-//		int innerLoop = 0;	//´ËÈËÓĞ¼¸¸öÑ§Éú
+//		int innerLoop = 0;	//æ­¤äººæœ‰å‡ ä¸ªå­¦ç”Ÿ
 //		cin >> innerLoop;
 //		if (innerLoop == 0)
 //		{
 //			party[i].genius = true;
-//			double p = 0;	    //¶ÁÈ¡¹¦Á¦Öµ
+//			double p = 0;	    //è¯»å–åŠŸåŠ›å€¼
 //			cin >> p;
 //			party[i].power = p;
 //		}
@@ -61,13 +61,13 @@
 //			}
 //		}
 //	}
-//	if (N == 1)//Èç¹ûÊÇÒ»¸öÈË
+//	if (N == 1)//å¦‚æœæ˜¯ä¸€ä¸ªäºº
 //	{
-//		if (party[0].genius) cout << printf("%d", floor(party[0].power * teacherPower));//ÇÒÎªµÃµÀÕß 
+//		if (party[0].genius) cout << printf("%d", floor(party[0].power * teacherPower));//ä¸”ä¸ºå¾—é“è€… 
 //		else cout << "0";
 //		return 0;
 //	}
-//	for (int ss : party[0].student)//¿ªÊ¼DFS
+//	for (int ss : party[0].student)//å¼€å§‹DFS
 //	{
 //		dfs(ss, party[0].power);
 //	}
