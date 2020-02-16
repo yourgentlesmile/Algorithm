@@ -14,6 +14,8 @@ import java.util.List;
  *
  * 输入: "cbbd"
  * 输出: "bb"
+ *
+ * 使用manacher算法
  */
 public class Five {
     public static String longestPalindrome(String s) {
