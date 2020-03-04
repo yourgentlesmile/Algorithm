@@ -49,6 +49,7 @@
  * 进阶解法：一步到位直接按正则表达式的实现来:生成有限状态机
  */
 public class Ten {
+    private static Boolean[][] result;
     public static boolean isMatch(String s, String p) {
         if(p.isEmpty()) return s.isEmpty();
 
@@ -60,8 +61,56 @@ public class Ten {
             return head && isMatch(s.substring(1),p.substring(1));
         }
     }
+
+    /**
+     * 自底向上
+     * @param text
+     * @param pattern
+     * @return
+     */
+    public static boolean v1(String text, String pattern) {
+        boolean[][] dp = new boolean[text.length() + 1][pattern.length() + 1];
+        dp[text.length()][pattern.length()] = true;
+
+        for (int i = text.length() - 1; i >= 0; i--){
+            for (int j = pattern.length() - 1; j >= 0; j--){
+                boolean first_match = (i < text.length() &&
+                (pattern.charAt(j) == text.charAt(i) ||
+                pattern.charAt(j) == '.'));
+                if (j + 1 < pattern.length() && pattern.charAt(j+1) == '*'){
+                    dp[i][j] = dp[i][j+2] || first_match && dp[i+1][j];
+                } else {
+                    dp[i][j] = first_match && dp[i+1][j+1];
+                }
+            }
+        }
+        return dp[0][0];
+    }
     //需要理解DP，再进一步优化
+    public static boolean isMatch_dp(String s, String p) {
+        result = new Boolean[s.length() + 1][p.length() + 1];
+        return dp(0, 0, s.toCharArray(), p.toCharArray());
+    }
+    public static boolean dp(int i, int j, char[] s, char[] p) {
+        if (result[i][j] != null) {
+            result[i][j] = true;
+        }
+        boolean ans;
+        if(j == p.length) {
+            ans = i == s.length;
+        } else {
+            boolean firstMatch = (i < s.length && (s[i] == p[j] || p[j] == '.'));
+            if(j + 1 < p.length && p[j + 1] == '*')
+                ans = dp(i,j + 2, s, p) || (firstMatch && dp(i + 1, j ,s ,p));
+            else {
+                ans = firstMatch && dp(i + 1, j + 1, s, p);
+            }
+        }
+        result[i][j] = ans;
+        return ans;
+    }
+
     public static void main(String[] args) {
-        System.out.println(isMatch("abc", "a"));
+        System.out.println(isMatch_dp("aa", "a*"));
     }
 }
