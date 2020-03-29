@@ -12,7 +12,7 @@
  * 原因：342 + 465 = 807
  *
  */
-public class Tow {
+public class T2 {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if(l1 == null) return l2;
         if(l2 == null) return l1;

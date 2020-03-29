@@ -18,7 +18,7 @@
  *
  * 则中位数是 (2 + 3)/2 = 2.5
  */
-public class Four {
+public class T4 {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int len = nums1.length + nums2.length;
         int num = 0;

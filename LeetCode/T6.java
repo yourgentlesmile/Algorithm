@@ -28,7 +28,7 @@ import java.util.Arrays;
  * E C   I H   N
  * T     S     G
  */
-public class Six {
+public class T6 {
     public static void main(String[] args) {
         System.out.println(convert("AV",1));
     }

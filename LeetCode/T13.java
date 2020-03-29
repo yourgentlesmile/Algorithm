@@ -41,7 +41,7 @@
  * 输出: 1994
  * 解释: M = 1000, CM = 900, XC = 90, IV = 4.
  */
-public class Thirteen {
+public class T13 {
     public static int romanToInt(String s) {
         int preValue = getValue(s.charAt(0));
         int res = 0;

@@ -17,7 +17,7 @@ import java.util.List;
  *
  * 使用manacher算法
  */
-public class Five {
+public class T5 {
     public static String longestPalindrome(String s) {
         s = init(s);
         char[] chars = s.toCharArray();

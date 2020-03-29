@@ -14,7 +14,7 @@ import java.util.Map;
  * 所以返回 [0, 1]
  *
  */
-public class One {
+public class T1 {
     public static void main(String[] args) {
 
     }

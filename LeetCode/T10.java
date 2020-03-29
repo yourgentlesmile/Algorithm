@@ -48,7 +48,7 @@
  *
  * 进阶解法：一步到位直接按正则表达式的实现来:生成有限状态机
  */
-public class Ten {
+public class T10 {
     private static Boolean[][] result;
     public static boolean isMatch(String s, String p) {
         if(p.isEmpty()) return s.isEmpty();
