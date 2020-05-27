@@ -2,10 +2,16 @@ import java.util.Arrays;
 
 /**
  * https://leetcode-cn.com/problems/find-the-longest-substring-containing-vowels-in-even-counts
+ * 由于需要出现的元音字母恰好出现偶数次，可以用位的异或运算代表奇偶性
+ * 然后再根据
+ * 偶数减偶数一定是偶数
+ * 奇数减奇数一定是偶数
+ *
+ * 能命中同一个slot，代表奇偶性一定是相同的，所以只需要计算一下距离就可以了
  */
 public class T1371 {
     public int findTheLongestSubstring(String s) {
-        int[] r = new int[32];
+        int[] r = new int[1 << 5];
         Arrays.fill(r, -1);
         r[0] = 0;
         int res = 0;

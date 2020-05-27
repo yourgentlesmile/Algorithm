@@ -1,5 +1,7 @@
 /**
  * https://leetcode-cn.com/problems/maximum-points-you-can-obtain-from-cards/
+ * 滑动窗口
+ * 先计算前N个，然后左边不断退出窗口，右边的数字不断加入窗口，维护一个最大分数即可
  */
 public class T1423 {
     public int maxScore(int[] cardPoints, int k) {
