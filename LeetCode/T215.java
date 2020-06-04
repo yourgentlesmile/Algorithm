@@ -1,9 +1,5 @@
 /**
- * todo
- *
- * @version V1.0
- * @Author XiongCheng
- * @Date 2020/5/19 17:34.
+ * 寻找第K大的元素，只需要维护一个大小为K的小顶堆即可
  */
 public class T215 {
     public int findKthLargest(int[] nums, int k) {
