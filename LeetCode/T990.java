@@ -1,6 +1,6 @@
 /**
  * https://leetcode-cn.com/problems/satisfiability-of-equality-equations
- * 该题目通过使用并查集来进行结题
+ * 该题目通过使用并查集来进行解题
  * 由于等号是具有传递性的，所以等号连接的变量一定属于同一个集合当中
  *
  * 当构建好了等号的集合时，只需要判断不等号连接的两个变量是否属于同一个集合
