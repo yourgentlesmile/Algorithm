@@ -13,6 +13,12 @@
  *
  */
 public class T2 {
+    static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
+
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if(l1 == null) return l2;
         if(l2 == null) return l1;
@@ -50,9 +56,4 @@ public class T2 {
         ListNode listNode = addTwoNumbers(a, d);
         System.out.println(listNode);
     }
-}
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
 }
