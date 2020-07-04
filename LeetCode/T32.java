@@ -18,7 +18,7 @@ public class T32 {
                 if(stack.isEmpty()) {
                     stack.push(i);
                 }else {
-                    max = Math.max(max, i - t + 1);
+                    max = Math.max(max, stack.peek());
                 }
             }
         }
