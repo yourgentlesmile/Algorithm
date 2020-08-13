@@ -27,20 +27,24 @@ public class T20 {
         return stack.isEmpty();
     }
     public boolean bestAnswer(String s) {
-        if(s == null || s.isEmpty())
-            return true;
-        Stack<Character> stack=new Stack<Character>();
-        for(char c:s.toCharArray()){
-            if(c=='(')
-                stack.push(')');
-            else if(c=='{')
-                stack.push('}');
-            else if(c=='[')
-                stack.push(']');
-            else if(stack.empty()||c!=stack.pop())
-                return false;
+        Stack<Character> stack = new Stack<>();
+        stack.push('#');
+        for(int i = 0;i < s.length();i++) {
+            char c = s.charAt(i);
+            if(c == ']') {
+                char t = stack.pop();
+                if(t != '[') return false;
+            } else if(c == '}'){
+                char t = stack.pop();
+                if(t != '{') return false;
+            }else if(c == ')') {
+                char t = stack.pop();
+                if(t != '(') return false;
+            }else {
+                stack.push(c);
+            }
         }
-        return stack.empty();
+        return stack.size() == 1;
     }
 
 }
