@@ -1,10 +1,11 @@
+package offer;
 import java.util.*;
 
 /**
  * https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/
  * DFS
  */
-public class Demo {
+public class T43 {
     public class TreeNode {
         int val;
         TreeNode left;
