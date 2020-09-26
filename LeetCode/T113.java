@@ -2,11 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * todo
+ * https://leetcode-cn.com/problems/path-sum-ii/
  *
- * @version V1.0
- * @Author XiongCheng
- * @Date 2020-09-04 7:30.
  */
 public class T113 {
     public class TreeNode {
